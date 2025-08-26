@@ -39,8 +39,8 @@ export default function ActionSection({
     },
     onSuccess: (data) => {
       toast({
-        title: "Success!",
-        description: `File successfully pushed to ${repository}`,
+        title: "成功！",
+        description: `ファイルが${repository}に正常にプッシュされました`,
       });
       
       // Invalidate recent files to refresh the list
@@ -51,8 +51,8 @@ export default function ActionSection({
     },
     onError: (error: any) => {
       toast({
-        title: "Error",
-        description: error.message || "Failed to convert and push to GitHub",
+        title: "エラー",
+        description: error.message || "変換とGitHubへのプッシュに失敗しました",
         variant: "destructive",
       });
       
@@ -73,12 +73,12 @@ export default function ActionSection({
           data-testid="button-convert-push"
         >
           <Rocket size={20} className="mr-3" />
-          {convertAndPushMutation.isPending ? "Processing..." : "Convert & Push to GitHub"}
+          {convertAndPushMutation.isPending ? "処理中..." : "変換してGitHubにプッシュ"}
         </Button>
         
         <div className="mt-4 text-center">
           <p className="text-xs text-muted-foreground">
-            This will convert your text to HTML and commit it to your repository
+            テキストをHTMLに変換し、リポジトリにコミットします
           </p>
         </div>
       </CardContent>

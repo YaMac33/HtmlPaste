@@ -23,13 +23,13 @@ export default function FileSettingsSection({
       <CardContent className="p-6">
         <div className="flex items-center gap-2 mb-4">
           <FileSignature className="text-primary" size={20} />
-          <h3 className="font-semibold">File Settings</h3>
+          <h3 className="font-semibold">ファイル設定</h3>
         </div>
         
         <div className="space-y-4">
           <div>
             <Label htmlFor="fileName" className="block text-sm font-medium mb-2">
-              File Name
+              ファイル名
             </Label>
             <Input
               id="fileName"
@@ -39,20 +39,20 @@ export default function FileSettingsSection({
               className="w-full"
             />
             <p className="text-xs text-muted-foreground mt-1">
-              Will create: <span className="font-mono" data-testid="text-full-filename">{fullFileName}</span>
+              作成されるファイル: <span className="font-mono" data-testid="text-full-filename">{fullFileName}</span>
             </p>
           </div>
           
           <div>
             <Label htmlFor="directory" className="block text-sm font-medium mb-2">
-              Directory Path
+              ディレクトリパス
             </Label>
             <Input
               id="directory"
               data-testid="input-directory"
               value={directory}
               onChange={(e) => setDirectory(e.target.value)}
-              placeholder="docs/ (optional)"
+              placeholder="docs/ (オプション)"
               className="w-full"
             />
           </div>

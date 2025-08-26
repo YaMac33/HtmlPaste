@@ -20,8 +20,8 @@ export default function RecentFilesSection() {
   const copyFileName = (fileName: string) => {
     navigator.clipboard.writeText(fileName);
     toast({
-      title: "Copied!",
-      description: "File name copied to clipboard",
+      title: "コピー完了！",
+      description: "ファイル名がクリップボードにコピーされました",
     });
   };
 
@@ -30,16 +30,16 @@ export default function RecentFilesSection() {
       <CardContent className="p-6">
         <div className="flex items-center gap-2 mb-4">
           <History className="text-primary" size={20} />
-          <h3 className="font-semibold">Recent Files</h3>
+          <h3 className="font-semibold">最近のファイル</h3>
         </div>
         
         {isLoading ? (
           <div className="text-center py-8 text-muted-foreground">
-            Loading recent files...
+            最近のファイルを読み込み中...
           </div>
         ) : recentFiles.length === 0 ? (
           <div className="text-center py-8 text-muted-foreground">
-            No files created yet. Create your first file above!
+            まだファイルが作成されていません。上で最初のファイルを作成してください！
           </div>
         ) : (
           <div className="space-y-3">

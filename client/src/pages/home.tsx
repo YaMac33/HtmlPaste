@@ -9,12 +9,12 @@ import StatusSection from "@/components/status-section";
 import RecentFilesSection from "@/components/recent-files-section";
 
 export default function Home() {
-  const [content, setContent] = useState("Welcome to my blog post!\n\nThis is a sample paragraph that demonstrates how the text-to-HTML conversion works. The tool will automatically format this content with proper HTML tags.\n\nHere's a list of features:\n- Automatic paragraph detection\n- Line break handling\n- Simple formatting preservation\n- GitHub integration\n\nVisit my website at https://example.com for more information.");
-  const [fileName, setFileName] = useState("my-content");
+  const [content, setContent] = useState("私のブログ投稿へようこそ！\n\nこれは、テキストからHTMLへの変換がどのように機能するかを示すサンプル段落です。このツールは、適切なHTMLタグでこのコンテンツを自動的にフォーマットします。\n\n機能のリスト：\n- 段落の自動検出\n- 改行の処理\n- シンプルなフォーマットの保持\n- GitHub統合\n\n詳細については、https://example.com の私のウェブサイトをご覧ください。");
+  const [fileName, setFileName] = useState("私のコンテンツ");
   const [directory, setDirectory] = useState("docs/");
   const [repository, setRepository] = useState("username/my-blog");
   const [branch, setBranch] = useState("main");
-  const [commitMessage, setCommitMessage] = useState("Add new content");
+  const [commitMessage, setCommitMessage] = useState("新しいコンテンツを追加");
 
   return (
     <div className="min-h-screen py-8 px-4 bg-background text-foreground">
@@ -23,10 +23,10 @@ export default function Home() {
         <header className="text-center mb-8">
           <div className="inline-flex items-center gap-3 mb-4">
             <Github className="text-3xl text-primary" size={32} />
-            <h1 className="text-3xl font-bold text-foreground">Text to HTML Publisher</h1>
+            <h1 className="text-3xl font-bold text-foreground">テキストからHTML変換・発行ツール</h1>
           </div>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Paste your text, convert it to HTML, and automatically push it to your GitHub repository
+            テキストを貼り付けて、HTMLに変換し、GitHubリポジトリに自動的にプッシュします
           </p>
         </header>
 

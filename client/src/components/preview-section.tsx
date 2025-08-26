@@ -29,14 +29,14 @@ export default function PreviewSection({ content }: PreviewSectionProps) {
       <CardContent className="p-6">
         <div className="flex items-center gap-2 mb-4">
           <Eye className="text-primary" size={20} />
-          <h2 className="text-xl font-semibold">HTML Preview</h2>
+          <h2 className="text-xl font-semibold">HTMLプレビュー</h2>
         </div>
         
         <div className="space-y-4">
           <div className="bg-muted rounded-md p-4 border min-h-[200px]">
             {isLoading ? (
               <div className="flex items-center justify-center h-32">
-                <div className="text-muted-foreground">Loading preview...</div>
+                <div className="text-muted-foreground">プレビューを読み込み中...</div>
               </div>
             ) : showRawHTML ? (
               <pre className="text-sm whitespace-pre-wrap font-mono" data-testid="preview-raw-html">
@@ -61,7 +61,7 @@ export default function PreviewSection({ content }: PreviewSectionProps) {
             data-testid="button-toggle-raw-html"
           >
             <Code size={16} className="mr-2" />
-            {showRawHTML ? "View Rendered" : "View Raw HTML"}
+            {showRawHTML ? "レンダリング表示" : "HTML表示"}
           </Button>
         </div>
       </CardContent>

@@ -37,15 +37,15 @@ export default function GithubSettingsSection({
     onSuccess: () => {
       setConnectionStatus('connected');
       toast({
-        title: "Connection Successful",
-        description: "GitHub repository is accessible.",
+        title: "接続成功",
+        description: "GitHubリポジトリにアクセスできます。",
       });
     },
     onError: (error: any) => {
       setConnectionStatus('error');
       toast({
-        title: "Connection Failed",
-        description: error.message || "Failed to connect to GitHub repository.",
+        title: "接続失敗",
+        description: error.message || "GitHubリポジトリに接続できませんでした。",
         variant: "destructive",
       });
     },
@@ -57,7 +57,7 @@ export default function GithubSettingsSection({
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-2">
             <Github className="text-primary" size={20} />
-            <h3 className="font-semibold">GitHub Settings</h3>
+            <h3 className="font-semibold">GitHub設定</h3>
           </div>
           <div className="flex items-center gap-2">
             <div className={`w-2 h-2 rounded-full ${
@@ -65,8 +65,8 @@ export default function GithubSettingsSection({
               connectionStatus === 'error' ? 'bg-red-500' : 'bg-gray-400'
             }`} />
             <span className="text-xs text-muted-foreground" data-testid="text-connection-status">
-              {connectionStatus === 'connected' ? 'Connected' : 
-               connectionStatus === 'error' ? 'Error' : 'Unknown'}
+              {connectionStatus === 'connected' ? '接続済み' : 
+               connectionStatus === 'error' ? 'エラー' : '不明'}
             </span>
           </div>
         </div>
@@ -74,7 +74,7 @@ export default function GithubSettingsSection({
         <div className="space-y-4">
           <div>
             <Label htmlFor="repository" className="block text-sm font-medium mb-2">
-              Repository
+              リポジトリ
             </Label>
             <Input
               id="repository"
@@ -84,18 +84,18 @@ export default function GithubSettingsSection({
                 setRepository(e.target.value);
                 setConnectionStatus('unknown');
               }}
-              placeholder="username/repository"
+              placeholder="ユーザー名/リポジトリ名"
               className="w-full"
             />
           </div>
           
           <div>
             <Label htmlFor="branch" className="block text-sm font-medium mb-2">
-              Branch
+              ブランチ
             </Label>
             <Select value={branch} onValueChange={setBranch}>
               <SelectTrigger data-testid="select-branch">
-                <SelectValue placeholder="Select branch" />
+                <SelectValue placeholder="ブランチを選択" />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="main">main</SelectItem>
@@ -107,7 +107,7 @@ export default function GithubSettingsSection({
           
           <div>
             <Label htmlFor="commitMessage" className="block text-sm font-medium mb-2">
-              Commit Message
+              コミットメッセージ
             </Label>
             <Input
               id="commitMessage"
@@ -127,7 +127,7 @@ export default function GithubSettingsSection({
             data-testid="button-test-connection"
           >
             <Settings size={16} className="mr-2" />
-            {testConnectionMutation.isPending ? "Testing..." : "Test Connection"}
+            {testConnectionMutation.isPending ? "テスト中..." : "接続テスト"}
           </Button>
         </div>
       </CardContent>

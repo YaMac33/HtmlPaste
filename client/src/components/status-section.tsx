@@ -52,12 +52,13 @@ export default function StatusSection() {
           <div className="flex items-start gap-3">
             <CheckCircle className="text-green-600 dark:text-green-400 mt-0.5" size={20} />
             <div className="flex-1">
-              <h4 className="font-medium text-green-800 dark:text-green-200">Successfully Published!</h4>
+              <h4 className="font-medium text-green-800 dark:text-green-200">正常に公開されました！</h4>
               <p className="text-sm text-green-700 dark:text-green-300 mt-1">
-                Your content has been converted to HTML and pushed to{' '}
+                コンテンツがHTMLに変換され、{' '}
                 <span className="font-mono" data-testid="text-success-repo">
                   {statusData.success.file.repository}
                 </span>
+                にプッシュされました
               </p>
               <div className="mt-3 flex items-center gap-4">
                 {statusData.success.fileUrl && (
@@ -69,7 +70,7 @@ export default function StatusSection() {
                     data-testid="link-view-github"
                   >
                     <ExternalLink size={14} />
-                    View on GitHub
+                    GitHubで表示
                   </a>
                 )}
                 {statusData.success.commitUrl && (
@@ -81,7 +82,7 @@ export default function StatusSection() {
                     data-testid="link-view-commit"
                   >
                     <Eye size={14} />
-                    View Commit
+                    コミットを表示
                   </a>
                 )}
               </div>
@@ -95,9 +96,9 @@ export default function StatusSection() {
           <div className="flex items-start gap-3">
             <Loader2 className="text-blue-600 dark:text-blue-400 mt-0.5 animate-spin" size={20} />
             <div className="flex-1">
-              <h4 className="font-medium text-blue-800 dark:text-blue-200">Processing...</h4>
+              <h4 className="font-medium text-blue-800 dark:text-blue-200">処理中...</h4>
               <p className="text-sm text-blue-700 dark:text-blue-300 mt-1">
-                Converting text to HTML and pushing to GitHub...
+                テキストをHTMLに変換してGitHubにプッシュ中...
               </p>
             </div>
           </div>
@@ -109,16 +110,16 @@ export default function StatusSection() {
           <div className="flex items-start gap-3">
             <AlertTriangle className="text-red-600 dark:text-red-400 mt-0.5" size={20} />
             <div className="flex-1">
-              <h4 className="font-medium text-red-800 dark:text-red-200">Error Occurred</h4>
+              <h4 className="font-medium text-red-800 dark:text-red-200">エラーが発生しました</h4>
               <p className="text-sm text-red-700 dark:text-red-300 mt-1" data-testid="text-error-message">
-                {statusData.error.error || "Failed to push to GitHub. Please check your settings and try again."}
+                {statusData.error.error || "GitHubへのプッシュに失敗しました。設定を確認してもう一度試してください。"}
               </p>
               <button 
                 onClick={() => setStatus('hidden')}
                 className="mt-3 text-sm text-red-600 dark:text-red-400 hover:underline flex items-center gap-2"
                 data-testid="button-dismiss-error"
               >
-                Dismiss
+                閉じる
               </button>
             </div>
           </div>
