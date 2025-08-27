@@ -54,7 +54,7 @@ export default function StatusSection() {
             <div className="flex-1">
               <h4 className="font-medium text-green-800 dark:text-green-200">正常に公開されました！</h4>
               <p className="text-sm text-green-700 dark:text-green-300 mt-1">
-                コンテンツがHTMLに変換され、{' '}
+                ChatGPTがコンテンツをHTMLに変換し、{' '}
                 <span className="font-mono" data-testid="text-success-repo">
                   {statusData.success.file.repository}
                 </span>
@@ -98,7 +98,7 @@ export default function StatusSection() {
             <div className="flex-1">
               <h4 className="font-medium text-blue-800 dark:text-blue-200">処理中...</h4>
               <p className="text-sm text-blue-700 dark:text-blue-300 mt-1">
-                テキストをHTMLに変換してGitHubにプッシュ中...
+                ChatGPTがテキストをHTMLに変換してGitHubにプッシュ中...
               </p>
             </div>
           </div>

@@ -73,12 +73,12 @@ export default function ActionSection({
           data-testid="button-convert-push"
         >
           <Rocket size={20} className="mr-3" />
-          {convertAndPushMutation.isPending ? "処理中..." : "変換してGitHubにプッシュ"}
+          {convertAndPushMutation.isPending ? "ChatGPT変換中..." : "ChatGPTで変換してGitHubにプッシュ"}
         </Button>
         
         <div className="mt-4 text-center">
           <p className="text-xs text-muted-foreground">
-            テキストをHTMLに変換し、リポジトリにコミットします
+            ChatGPTがテキストを高品質なHTMLに変換し、リポジトリにコミットします
           </p>
         </div>
       </CardContent>

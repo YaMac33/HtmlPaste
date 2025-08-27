@@ -29,14 +29,14 @@ export default function PreviewSection({ content }: PreviewSectionProps) {
       <CardContent className="p-6">
         <div className="flex items-center gap-2 mb-4">
           <Eye className="text-primary" size={20} />
-          <h2 className="text-xl font-semibold">HTMLプレビュー</h2>
+          <h2 className="text-xl font-semibold">ChatGPT HTMLプレビュー</h2>
         </div>
         
         <div className="space-y-4">
           <div className="bg-muted rounded-md p-4 border min-h-[200px]">
             {isLoading ? (
               <div className="flex items-center justify-center h-32">
-                <div className="text-muted-foreground">プレビューを読み込み中...</div>
+                <div className="text-muted-foreground">ChatGPTがHTML変換中...</div>
               </div>
             ) : showRawHTML ? (
               <pre className="text-sm whitespace-pre-wrap font-mono" data-testid="preview-raw-html">

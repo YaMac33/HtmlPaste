@@ -23,10 +23,10 @@ export default function Home() {
         <header className="text-center mb-8">
           <div className="inline-flex items-center gap-3 mb-4">
             <Github className="text-3xl text-primary" size={32} />
-            <h1 className="text-3xl font-bold text-foreground">テキストからHTML変換・発行ツール</h1>
+            <h1 className="text-3xl font-bold text-foreground">ChatGPT HTML変換・発行ツール</h1>
           </div>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            テキストを貼り付けて、HTMLに変換し、GitHubリポジトリに自動的にプッシュします
+            テキストを貼り付けて、ChatGPTが高品質なHTMLに変換し、GitHubリポジトリに自動的にプッシュします
           </p>
         </header>
 
